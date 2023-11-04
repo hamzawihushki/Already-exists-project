@@ -1,0 +1,476 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #a12c2f;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0%;
+}
+.container {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.fix-clear {
+  clear: both;
+}
+/* Start header area  */
+.header {
+  position: relative;
+  background: rgba(31, 39, 43, 0.75);
+}
+.header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 3;
+  height: 100px;
+  color: #fff;
+  background: rgb(255 255 255 / 18%);
+}
+.header .nav-bar .logo {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
+}
+.header .nav-bar ul {
+  overflow: hidden;
+  margin-left: 100px;
+}
+.header .nav-bar ul li {
+  float: left;
+  padding: 10px 20px;
+  list-style: none;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+.header .nav-bar ul li:after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: #f5a425 solid 0px;
+  transition: 300ms;
+  text-align: center;
+}
+.header .nav-bar ul li:hover::after {
+  width: 100%;
+  border-bottom: #f5a425 solid 1px;
+}
+.header .nav-bar ul li:hover {
+  color: #f5a425;
+}
+.scroll-header {
+  position: fixed !important;
+  top: 0px !important;
+  left: 0 !important;
+  height: 80px !important;
+  width: 100% !important;
+  z-index: 100 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  transition: 0.3s;
+}
+/* End header area  */
+/* Start landing-page  */
+.landing-page {
+  height: 54vw;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+.landing-page video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -4;
+}
+.landing-page .overlay {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 39, 43, 0.75);
+  z-index: -3;
+}
+.landing-page .info-box {
+  color: #fff;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landing-page .info-box button {
+  background-color: var(--main-color);
+  padding: 17px 27px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 26px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.landing-page .info-box button:hover {
+  background-color: #7b2225;
+}
+.landing-page .info-box h4 {
+  margin: 0;
+}
+.landing-page .info-box h1 {
+  letter-spacing: 1px;
+  font-size: 37px;
+  margin: 10px 0px;
+}
+/* End landing-page  */
+
+/* start UPCOMING MEETINGS  */
+.upcoming-meeting {
+  margin-top: -86px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: url("../img/images/meetings-page-bg.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.upcoming-meeting .services {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 88%;
+}
+.upcoming-meeting .services .serv-box {
+  background-image: url(/img/images/service-item-bg.jpg);
+  width: 377px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 27px;
+  color: #fff;
+}
+.upcoming-meeting h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 21 px;
+  margin: 0;
+  position: relative;
+}
+.upcoming-meeting h2::after {
+  content: "";
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  width: 100%;
+  z-index: 12;
+  color: #ffffff08;
+  border: 1px solid;
+}
+.upcoming-meeting .meeting-section {
+  display: flex;
+  margin-top: 125px;
+}
+.upcoming-meeting .meeting-section .meeting-catgories {
+  width: 323px;
+  background: #fff;
+  padding: 8px;
+  margin-right: 90px;
+  height: 458px;
+  border-radius: 40px;
+}
+
+.upcoming-meeting .meeting-section .meeting-catgories h3 {
+  font-weight: 500;
+  text-align: center;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .catgories-list {
+  margin: 43px 0;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .catgories-list li {
+  list-style: none;
+  margin: 21px 0;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .catgories-list li a {
+  text-decoration: none;
+  margin: 10px;
+  color: #333;
+  transition: 0.2s;
+}
+.upcoming-meeting
+  .meeting-section
+  .meeting-catgories
+  .catgories-list
+  li
+  a:hover {
+  color: #000;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .button {
+  width: 100%;
+  text-align: center;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .button button {
+  width: 70%;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  background: #a12c2f;
+  margin-top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.upcoming-meeting .meeting-section .meeting-catgories .button button:hover {
+  background-color: #7b2225;
+}
+.upcoming-meeting .meeting-section .price {
+  flex: 2;
+  overflow: hidden;
+}
+.meeting-section .price .price-card {
+  float: left;
+  width: 44%;
+  margin-right: 3%;
+  background: #fff;
+  margin-bottom: 3%;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.meeting-section .price .price-card .dolar {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: #fff;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.meeting-section .price .price-card img {
+  width: 100%;
+}
+.meeting-section .price .price-card .price-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 7px 30px;
+}
+.meeting-section .price .price-card .price-info .date {
+  margin: 0 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+}
+.meeting-section .price .price-card .price-info .date span {
+  color: #7b2225;
+}
+
+/* End UPCOMING MEETINGS  */
+/* <!-- Start apply now section  --> */
+.apply-now {
+  height: 100vh;
+  background-image: url("../img/images/apply-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+.apply-now .left-side {
+  float: left;
+  width: 54%;
+}
+.apply-now .left-side .apply-degree {
+  background-color: rgba(250, 250, 250, 0.15);
+  color: #fff;
+  padding: 20px;
+  margin: 60px;
+}
+.apply-now .left-side .apply-degree h2 {
+}
+.apply-now .left-side .apply-degree p {
+}
+.apply-now .left-side .apply-degree .button .first {
+  background-color: var(--main-color);
+  padding: 17px 27px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 26px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.apply-now .left-side .apply-degree .button .last {
+  background-color: #f5a425;
+  padding: 17px 27px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 26px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.apply-now .right-side {
+  float: right;
+  width: 42%;
+  margin-top: 57px;
+  padding: 23px;
+  background: #fff;
+  border-radius: 60px;
+}
+.apply-now .right-side .about-box {
+  max-height: 100px;
+  min-height: 134px;
+  overflow: hidden;
+  margin-bottom: 4px;
+  padding: 14px;
+  transition: 0.3s !important;
+}
+.apply-now .right-side .about-box .about-course {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.apply-now .right-side .open {
+  transition: 0.3s;
+  min-height: 200px !important;
+}
+.apply-now .right-side .about-box .color {
+  transition: 0.2s;
+  color: #f7b200;
+}
+.fa-arrow-down:before {
+  content: "\f105";
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.apply-now .right-side .about-box p {
+  text-align: center;
+  font-size: 15px;
+  padding: 9px 14px;
+  color: #4d4d4d;
+  letter-spacing: 1.1px;
+}
+
+/* <!-- End apply now section  --> */
+.owl {
+  min-height: 600px;
+  background-image: url("../img/images/meetings-page-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.owl h2 {
+  color: #fff;
+  margin: 44px 0 0;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+.owl h2::after {
+  content: "";
+  left: 0%;
+  width: 100%;
+  border: #4d4d4d6e solid 1px;
+  position: absolute;
+  bottom: -15px;
+}
+.owl-carousel {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.owl-carousel .item {
+  background: #fff;
+  margin: 0px -50px;
+  max-width: 296px;
+  height: 365px;
+  overflow: hidden;
+}
+.owl-carousel .item img {
+  width: 100%;
+}
+.owl-carousel .item p {
+  text-align: center;
+  color: #333;
+  position: relative;
+  padding: 10px;
+  font-size: 14px;
+}
+.owl-carousel .item p::after {
+  content: "";
+  width: 89%;
+  position: absolute;
+  bottom: -10px;
+  left: 6%;
+  z-index: 100;
+  color: #00000036;
+  border: 1px solid;
+}
+
+.owl-carousel .item .info-item {
+}
+.owl-carousel .item .evaluation-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 2px;
+  justify-content: space-around;
+}
+.owl-carousel .item .evaluatoin-item .stars {
+}
+.fa-star:before {
+  content: "\f005";
+  margin: 0 2px;
+  color: #ffd102;
+}
+.owl-carousel .item .evaluation-item .price {
+  color: #a12c2f;
+  font-weight: 500;
+}
+
+.fa-arrow-left,
+.fa-arrow-right {
+  font-size: 30px;
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+}
+.fa-arrow-left {
+  left: 30px !important   ;
+}
+.fa-arrow-right {
+  right: 30px;
+}
